@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' blob:; worker-src 'self' blob:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; style-src-elem 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: blob:; connect-src 'self' ws: wss:;">
+    <title>Zaid - Game Developer & Football Enthusiast</title>
+    <meta name="description" content="Game developer passionate about creating immersive football gaming experiences with Unity, Unreal Engine 5, and cutting-edge technology">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚽</text></svg>">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loader">
+            <div class="loader-logo">⚽</div>
+            <div class="loader-text">Loading...</div>
+            <div class="loader-bar">
+                <div class="loader-progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-brand">
+            <span class="brand-icon">⚽</span>
+            <span class="brand-text">ZAID</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="nav-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero-section">
+            <div class="hero-background">
+                <div class="particle-layer" id="particles"></div>
+                <div class="football-field"></div>
+            </div>
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        <span class="title-main">ZAID</span>
+                        <span class="title-sub">GAME DEVELOPER</span>
+                    </h1>
+                    <p class="hero-description">
+                        A dedicated game developer with a flair for transforming concepts into visually captivating and immersive gaming experiences.
+                    </p>
+                    <div class="hero-cta">
+                        <button class="btn btn-primary">View My Work</button>
+                        <button class="btn btn-secondary">Get In Touch</button>
+                    </div>
+                </div>
+                <div class="hero-3d" id="hero-canvas">
+                    <!-- 3D Gaming Room will be rendered here -->
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <div class="scroll-arrow">↓</div>
+                <span>Scroll to explore</span>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">About Me</h2>
+                    <div class="section-subtitle">Passionate about gaming & football</div>
+                </div>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>I'm a passionate game developer who loves creating beautiful, interactive experiences on the web. With expertise in Unity, Unreal Engine 5, and modern web technologies, I bring ideas to life in 3D space.</p>
+                        <p>My journey in game development started with curiosity and has evolved into a passion for pushing the boundaries of what's possible in interactive entertainment.</p>
+                    </div>
+                                    <div class="about-visual">
+                    <div class="floating-football">⚽</div>
+                    <div class="floating-logo">🥽</div>
+                    <div class="floating-logo">🎮</div>
+                    <div class="floating-logo">🤖</div>
+                    <div class="floating-logo">🎨</div>
+                </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Skills & Tools</h2>
+                    <div class="section-subtitle">Technologies I master</div>
+                </div>
+                <div class="skills-grid">
+                    <div class="skill-card" data-skill="unity">
+                        <div class="skill-icon">🎮</div>
+                        <h3>Unity</h3>
+                        <p>3D Game Development</p>
+                    </div>
+                    <div class="skill-card" data-skill="unreal">
+                        <div class="skill-icon">🚀</div>
+                        <h3>Unreal Engine 5</h3>
+                        <p>Next-Gen Graphics</p>
+                    </div>
+                    <div class="skill-card" data-skill="blender">
+                        <div class="skill-icon">🎨</div>
+                        <h3>Blender</h3>
+                        <p>3D Modeling & Animation</p>
+                    </div>
+                    <div class="skill-card" data-skill="ai">
+                        <div class="skill-icon">🤖</div>
+                        <h3>AI</h3>
+                        <p>Machine Learning & NPCs</p>
+                    </div>
+                    <div class="skill-card" data-skill="xr">
+                        <div class="skill-icon">🥽</div>
+                        <h3>XR</h3>
+                        <p>VR & AR Development</p>
+                    </div>
+                    <div class="skill-card" data-skill="photoshop">
+                        <div class="skill-icon">🖼️</div>
+                        <h3>Photoshop</h3>
+                        <p>Digital Art & Design</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section id="portfolio" class="portfolio-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Portfolio</h2>
+                    <div class="section-subtitle">Some things I've worked on</div>
+                </div>
+                <div class="portfolio-grid">
+                    <div class="portfolio-item" data-category="unreal">
+                        <div class="portfolio-preview">
+                            <div class="portfolio-image">
+                                <div class="portfolio-image-placeholder">
+                                    <div class="placeholder-content">
+                                        <span class="placeholder-icon">⚽</span>
+                                        <span class="placeholder-text">Football Simulation</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-tags">
+                                    <span class="tag">Unreal Engine 5</span>
+                                    <span class="tag">Football</span>
+                                    <span class="tag">3D</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio-info">
+                            <h3>Football Simulation</h3>
+                            <p>Advanced football simulation with realistic physics and AI players</p>
+                        </div>
+                    </div>
+                    <div class="portfolio-item" data-category="unity">
+                        <div class="portfolio-preview">
+                            <div class="portfolio-image">
+                                <div class="portfolio-image-placeholder">
+                                    <div class="placeholder-content">
+                                        <span class="placeholder-icon">📱</span>
+                                        <span class="placeholder-text">Mobile Game</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-tags">
+                                    <span class="tag">Unity</span>
+                                    <span class="tag">Mobile</span>
+                                    <span class="tag">C#</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio-info">
+                            <h3>Mobile Football Game</h3>
+                            <p>Casual mobile game with intuitive touch controls</p>
+                        </div>
+                    </div>
+                    <div class="portfolio-item" data-category="xr">
+                        <div class="portfolio-preview">
+                            <div class="portfolio-image">
+                                <div class="portfolio-image-placeholder">
+                                    <div class="placeholder-content">
+                                        <span class="placeholder-icon">🥽</span>
+                                        <span class="placeholder-text">VR Experience</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-tags">
+                                    <span class="tag">XR</span>
+                                    <span class="tag">VR</span>
+                                    <span class="tag">Immersive</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio-info">
+                            <h3>VR Football Experience</h3>
+                            <p>Immersive VR experience for football training</p>
+                        </div>
+                    </div>
+                    <div class="portfolio-item" data-category="ai">
+                        <div class="portfolio-preview">
+                            <div class="portfolio-image">
+                                <div class="portfolio-image-placeholder">
+                                    <div class="placeholder-content">
+                                        <span class="placeholder-icon">🤖</span>
+                                        <span class="placeholder-text">AI Game</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-tags">
+                                    <span class="tag">AI</span>
+                                    <span class="tag">Machine Learning</span>
+                                    <span class="tag">Strategy</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio-info">
+                            <h3>AI Strategy Game</h3>
+                            <p>Strategy game with intelligent AI opponents</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Contact Me</h2>
+                    <div class="section-subtitle">Let's create something amazing together</div>
+                </div>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <h3>Ready to bring your ideas to life?</h3>
+                        <p>I'd love to hear about your project and discuss how we can work together to create an immersive gaming experience.</p>
+                        <div class="contact-links">
+                            <a href="mailto:hello@example.com" class="contact-link">
+                                <span class="link-icon">📧</span>
+                                hello@example.com
+                            </a>
+                            <a href="https://github.com/yourusername" class="contact-link">
+                                <span class="link-icon">🐙</span>
+                                GitHub
+                            </a>
+                            <a href="https://linkedin.com/in/yourusername" class="contact-link">
+                                <span class="link-icon">💼</span>
+                                LinkedIn
+                            </a>
+                        </div>
+                    </div>
+                    <form class="contact-form">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" placeholder="Tell me about your project" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="footer-icon">⚽</span>
+                    <span>ZAID</span>
+                </div>
+                <p class="footer-text">Built with ❤️ and passion for gaming</p>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="main.js"></script>
+</body>
+</html>

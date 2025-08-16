@@ -1,0 +1,19 @@
+# Content Security Policy Headers
+<IfModule mod_headers.c>
+    Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' blob:; worker-src 'self' blob:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; style-src-elem 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: blob:; connect-src 'self' ws: wss:;"
+</IfModule>
+
+# Enable CORS for development
+<IfModule mod_headers.c>
+    Header always set Access-Control-Allow-Origin "*"
+    Header always set Access-Control-Allow-Methods "GET, POST, OPTIONS"
+    Header always set Access-Control-Allow-Headers "Content-Type"
+</IfModule>
+
+# Enable WebGL and 3D content
+<IfModule mod_mime.c>
+    AddType application/octet-stream .glb
+    AddType application/octet-stream .gltf
+    AddType image/jpeg .jpg
+    AddType image/png .png
+</IfModule>
